@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+</head>
+<body>
+<h1>Our first example</h1>
+<p>Hint (open console)</p>
+<div id="demo" style="font-weight: bold"></div>
+
+<script>
+    console.log('Here you are! Great!');
+    console.log('Now edit example_1.html and uncomment function example1()');
+
+    const example1 = () => {
+
+        alert('Welcome to example 1'); // We use alerts to inform user about something
+
+        setTimeout(() => {
+            // Confirm allows the user to give us simple yes/no info
+            if (confirm('Do you want to learn some javascript in the browser?')) {
+
+                // Prompt allows us the user input some text
+                const name = prompt('Ok, so please input your name');
+
+                // DOM in action
+                document.getElementById('demo').innerHTML = `Seems like ${name} wants to learn about the DOM`
+            }
+        }, 1000)
+    };
+
+    example1();
+</script>
+
+</body>
+</html>

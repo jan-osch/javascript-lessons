@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 2</title>
+    <style>
+        body {
+            font-family: "Lucida Sans", serif;
+        }
+    </style>
+</head>
+<body>
+<h1>Interactive Example</h1>
+<div>
+    Please input color
+    <br>
+    <input id="my-input" type="text">
+    <br>
+    <button id="my-button">Click me</button>
+</div>
+<script>
+    const [button] = document.getElementsByTagName('button');
+
+    const onClick = () => {
+        console.log('hey you clicked me!');
+    };
+
+    button.addEventListener('click', onClick);
+
+    const input = document.getElementById('my-input');
+    const [body] = document.getElementsByTagName('body');
+
+    // Example 1
+//    const betterOnClick = () => {
+//        const value = input.value;
+//        console.log(`setting new color to body: ${value}`);
+//        body.style.backgroundColor = value;
+//    };
+//
+//    button.removeEventListener('click', onClick);
+//    button.addEventListener('click', betterOnClick);
+
+    // Example 2
+//    const getRandomColor = () => {
+//        const letters = '0123456789ABCDEF';
+//        let color = '#'; // Hex color
+//        for (let i = 0; i < 6; i++) {
+//            color += letters[Math.floor(Math.random() * 16)];
+//        }
+//        return color;
+//    };
+//
+//    document.addEventListener('keyup', (event) => {
+//        if (event.keyCode === 32) {
+//            body.style.backgroundColor = getRandomColor();
+//        }
+//    })
+
+
+</script>
+</body>
+</html>
